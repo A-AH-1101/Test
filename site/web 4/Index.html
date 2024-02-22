@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="Fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>گلخونه</title>
+</head>
+<body>
+    <header>
+        <div class="header"> <!-- Start of header-->
+            <div class="right-header"> <!-- Start of right-header-->
+                <div class="right-icons">
+                    <a href="#"> <i class="ri-youtube-line"></i> </a>
+                    <a href="#"> <i class="ri-phone-line"></i> </a>
+                    <a href="#"> <i class="ri-mail-line"></i> </a>
+                    <a href="#"> <i class="ri-instagram-line"></i> </a>
+                </div>
+            </div> <!-- End of right-header -->
+
+            <div class="left-header"> <!-- Start of left-header-->
+                <div class="left-icons">
+                    <a href="#"> <i class="ri-heart-line"></i> </a>
+
+                    <div class="cart">
+                        <span>0</span>
+                        <a href="#"> <i class="ri-shopping-bag-line"></i> </a>
+                        <div class="cart-list">
+                            <div class="content">
+                                <p>سبد خرید خالی است</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="track-order">
+                    <a href="#"> <i class="ri-file-list-2-line"></i> </a>
+                    <a href="#">پیگیری سفارش</a>
+                </div>
+
+                <div class="user-account">
+                    <a href="#"> <i class="ri-user-line"></i> </a>
+                    <a href="#">ورود / عضویت</a>
+                </div>
+
+            </div> <!-- End of left-header -->
+        </div> <!-- End of header-->
+
+        <nav class="navbar"> <!-- Start of navbar-->
+            <div class="user-account">
+                <a href="#"> <i class="ri-user-line"></i> </a>
+            </div>
+            
+            <div class="logo">
+                <img src="pictures/Logo.png" alt="Golkhune">
+            </div>
+
+            <div class="quick-link">
+                <a href="#"> <span> صفحه اصلی </span> </a>
+                <a id="categories" href="#"> <span>دسته بندی محصولات</span> </a>
+                <a href="#"> <span> گیاهکده </span></a>
+                <a href="#"> <span> دانشکده </span> </a>
+            </div>
+
+            <div class="list-categories">
+                <div class="category">
+                    <div class="image"> <a href="#"> <img src="pictures/category-1.jpg" alt=""> </a> </div>
+                    <div class="title"> <a href="#"> گیاهدان </a> </div>
+                </div>
+
+                <div class="category">
+                    <div class="image"> <a href="#"> <img src="pictures/category-2.jpg" alt=""> </a> </div>
+                    <div class="title"> <a href="#"> کاکتوس </a> </div>
+                </div>
+
+                <div class="category">
+                    <div class="image"> <a href="#"> <img src="pictures/category-3.jpg" alt=""> </a> </div>
+                    <div class="title"> <a href="#"> باغچه ای </a> </div>
+                </div>
+
+                <div class="category">
+                    <div class="image"> <a href="#"> <img src="pictures/category-4.jpg" alt=""> </a> </div>
+                    <div class="title"> <a href="#"> آپارتمانی </a> </div>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <a href="#"> <i class="ri-search-line"></i> </a>
+            </div>
+
+            <div class="mobile-menu">
+                <a href="#"> <i class="ri-menu-line"></i> </a>
+            </div>
+        </nav> <!-- End of navbar-->
+    </header>
+
+    <div class="menu-mobile"> <!-- Start of menu-mobile-->
+        <div class="menu-close"> <i class="ri-close-line"></i> </div>
+
+        <ul>
+            <li> <div class="title"> <a href="#"> صفحه اصلی </a> </div> </li>
+
+            <li class="add-content"> <div class="title"> <a href="#"> فروشگاه </a> <i id="show-1" class="ri-arrow-down-s-line"></i> </div>
+                <div id="content-1" class="list-container">
+                    <ul>
+                        <li> <a href="#"> سبد خرید </a> </li>
+                        <li> <a href="#"> پیگیری سفارش </a> </li>
+                        <li> <a href="#"> حساب کاربری من </a> </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="add-content"> <div class="title"> <a href="#"> دسته بندی محصولات </a> <i id="show-2" class="ri-arrow-down-s-line"></i> </div>
+                <div id="content-2" class="list-container">
+                    <ul>
+                        <li> <a href="#"> آپارتمانی </a> </li>
+                        <li> <a href="#"> باغچه ای </a> </li>
+                        <li> <a href="#"> کاکتوس </a> </li>
+                        <li> <a href="#"> گیاهدان </a> </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li> <div class="title"> <a href="#"> دانشکده </a> </div> </li>
+
+            <li> <div class="title"> <a href="#"> سوالات متداول </a> </div> </li>
+
+            <li class="add-content"> <div class="title"> <a href="#"> درباره ما </a> <i id="show-3" class="ri-arrow-down-s-line"></i> </div> 
+                <div id="content-3" class="list-container">
+                    <ul>
+                        <li> <a href="#"> گالری </a> </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li> <div class="title"> <a href="#"> تماس با ما </a> </div> </li>
+
+            <li> <div class="title"> <a href="#"> ثبت نام برای کاشت نهال </a> </div> </li>
+
+            <li> <div class="title"> <a href="#"> پرتفولیو </a> </div> </li>
+        </ul>
+
+        <div class="menu-icon">
+            <a href="#"> <i class="ri-youtube-line"></i> </a>
+            <a href="#"> <i class="ri-phone-line"></i> </a>
+            <a href="#"> <i class="ri-mail-line"></i> </a>
+            <a href="#"> <i class="ri-instagram-line"></i> </a>
+        </div>
+    </div> <!-- End of menu-mobile-->
+
+    <div class="swiper"> <!-- Start of Slider-->
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div id="slider-1" class="swiper-slide">
+            <div class="content">
+                <h2 class="title"> گلخونه دات کام یعنی </h2>
+                <h1> عشق به گیاهان </h1>
+                <h2> ما به گیاهان احترام میگذاریم </h2>
+                <a href="#"> خرید گل و گیاه </a>
+            </div>
+          </div>
+          <div id="slider-2" class="swiper-slide">
+            <div class="content">
+                <h2 class="title"> به گلخونه دات کام خوش اومدید </h2>
+                <h1> سرپرستی گیاه </h1>
+                <h2> پرستاری از گیاهان، پرستاری از آینده زمین است </h2>
+                <a href="#"> انجمن گیاه دوستان </a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div> <!-- End of Slider-->
+
+    <div class="gallery"> <!-- Start of gallery -->
+    <div class="gallery-item large animate__animated animate__fadeInUp">
+      <a href="#"> <img id="show-4" src="pictures/product-1.jpg" alt="Image 1"> </a>
+      <div id="product-1" class="detail">
+        <div class="content">
+            <h1> فیکوس لیراتا مینیاتوری </h1>
+            <h4> 298000 تومان </h4>
+            <button> <a href="#"> افزودن به سبد خرید <i class="ri-shopping-cart-line"></i> </a> </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item animate__animated animate__fadeInUp">
+      <a href="#"> <img id="show-5" src="pictures/product-2.jpg" alt="Image 2"> </a>
+      <div id="product-2" class="detail">
+        <div class="content">
+            <h1> فیکوس سبز </h1>
+            <h4> 298000 تومان <span> 398000 تومان </span> </h4>
+            <button> <a href="#"> افزودن به سبد خرید <i class="ri-shopping-cart-line"></i> </a> </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item animate__animated animate__fadeInUp">
+      <a href="#"> <img id="show-6" src="pictures/product-3.jpg" alt="Image 3"> </a>
+      <div id="product-3" class="detail">
+        <div class="content">
+            <h1> کروتون آکوبا </h1>
+            <h4> 100000 تومان </h4>
+            <button> <a href="#"> افزودن به سبد خرید <i class="ri-shopping-cart-line"></i> </a> </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item large animate__animated animate__fadeInUp">
+      <a href="#"> <img id="show-7" src="pictures/product-4.jpg" alt="Image 4"> </a>
+      <div id="product-4" class="detail">
+        <div class="content">
+            <h1> سینگونیوم مینیاتوری </h1>
+            <h4> 78000 تومان <span> 158000 تومان </span> </h4>
+            <button> <a href="#"> افزودن به سبد خرید <i class="ri-shopping-cart-line"></i> </a> </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item animate__animated animate__fadeInUp">
+      <a href="#"> <img id="show-8" src="pictures/product-5.jpg" alt="Image 5"> </a>
+      <div id="product-5" class="detail">
+        <div class="content">
+            <h1> فیلوندرون شرابی </h1>
+            <h4> 198000 تومان <span> 298000 تومان </span> </h4>
+            <button> <a href="#"> افزودن به سبد خرید <i class="ri-shopping-cart-line"></i> </a> </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item animate__animated animate__fadeInUp">
+      <a href="#"> <img id="show-9" src="pictures/product-6.jpg" alt="Image 6"> </a>
+      <div id="product-6" class="detail">
+        <div class="content">
+            <h1> فیکوس سبز </h1>
+            <h4> 298000 تومان <span> 398000 تومان </span> </h4>
+            <button> <a href="#"> افزودن به سبد خرید <i class="ri-shopping-cart-line"></i> </a> </button>
+        </div>
+      </div>
+    </div>
+    </div> <!-- End of gallery -->
+
+    <div class="campaign"> <!-- Start of campaign-->
+        <div class="detail">
+            <h3> تخفیفات ویژه </h3>
+            <h4> روز شمار تا روز موعد </h4>
+            <p> این رویداد منقضی شده است </p>
+            <button> <a href="#"> خرید فقط با 25 تومان </a> </button>
+        </div>
+
+        <div class="image">
+            <img src="pictures/Campaign-1.png" alt="">
+        </div>
+    </div> <!-- End of campaign-->
+
+    <div class="group-title"> مشاهده دسته بندی ها</div> <!-- Start of group-->
+    <div class="group">
+        <div class="group-item">
+            <img src="pictures/category-1.jpg" alt="">
+            <div id="show-10" class="detail">
+                <div id="group-1" class="content">
+                    <h1> گیاهدان </h1>
+                    <button> <a href="#"> مشاهده محصولات </a> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-item">
+            <img src="pictures/category-2.jpg" alt="">
+            <div id="show-11" class="detail">
+                <div id="group-2" class="content">
+                    <h1> کاکتوس </h1>
+                    <button> <a href="#"> مشاهده محصولات </a> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-item">
+            <img src="pictures/category-3.jpg" alt="">
+            <div id="show-12" class="detail">
+                <div id="group-3" class="content">
+                    <h1> باغچه ای </h1>
+                    <button> <a href="#"> مشاهده محصولات </a> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="group-item">
+            <img src="pictures/category-4.jpg" alt="">
+            <div id="show-13" class="detail">
+                <div id="group-4" class="content">
+                    <h1> آپارتمانی </h1>
+                    <button> <a href="#"> مشاهده محصولات </a> </button>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of group-->
+
+    <div class="banner">
+        <div class="container">
+            <h4> به گلخونه خوش اومدید </h4>
+            <p> رسالت ما سرپرستی گیاهان است </p>
+        </div>
+        <img src="pictures/Banner.png" alt="">
+        <img src="pictures/Banner.png" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

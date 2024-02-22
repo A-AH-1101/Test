@@ -1,0 +1,765 @@
+@font-face {
+    font-family: vazir;
+    font-style: normal;
+    src: url(../fonts/Vazir-Medium.eot);
+    src: url(../fonts/Vazir-Medium.ttf) format(ttf),
+        url(../fonts/Vazir-Medium.woff) format(woff),
+        url(../fonts/Vazir-Medium.woff2) format(woff2);
+}
+@font-face {
+    font-family: shabnam;
+    font-style: bold;
+    src: url(../fonts/Shabnam-Bold.eot);
+    src: url(../fonts/Shabnam-Bold.ttf) format(ttf),
+        url(../fonts/Shabnam-Bold.woff) format(woff),
+        url(../fonts/Shabnam-Bold.woff2) format(woff2);
+}
+@font-face {
+    font-family: yekan;
+    font-style: normal;
+    src: url(../fonts/Far_Yekan.ttf) format(ttf);
+}
+
+* {
+    direction: rtl;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000000;
+}
+
+/* A) HEADER */
+    /* A-1) Header-right*/
+    .header {
+        position: relative;
+        background-color:  #e6e8e4 ;
+        height: 57px;
+    }
+    .header .right-header {
+        position: absolute;
+        right: 5%;
+        top: 15px;
+    }
+    .right-icons a {
+        text-decoration: none;
+    }
+    .right-icons i {
+        margin: 10px;
+        padding: 5px;
+        font-size: 25px;
+        color: #000000;
+        border: 1px solid  #21a654 ;
+        border-radius: 10px;
+        transition: background-color 1s ease-in-out, border 1s ease-in-out ;
+    }
+    .right-icons i:hover {
+        background-color:  #81af37 ;
+        border: none;
+    }
+    /* End of Header-right*/
+
+    /* A-2) Header-left*/
+    .header .left-header {
+        position: absolute;
+        left: 5%;
+        top: 15px;
+    }
+    .left-header .mobile-menu,
+    .left-header .user-account,
+    .left-header .track-order,
+    .left-header .left-icons,
+    .left-icons .cart {
+        display:inline-block;
+        margin-right: 20px;
+    }
+    .user-account a,
+    .track-order a {
+        text-decoration: none;
+        font-family: vazir;
+        padding-right: 5px;
+        color: #000000;
+    }
+    .user-account a:nth-child(1),
+    .track-order a:nth-child(1) {
+        font-size: 20px;
+        transition: color 0.5s ease;
+    }
+    .user-account a:nth-child(1):hover,
+    .track-order a:nth-child(1):hover {
+        color: #21a654;
+    }
+    .user-account a:nth-child(2):hover,
+    .track-order a:nth-child(2):hover {
+        text-decoration: underline;
+    }
+    .left-icons .cart {
+        position: relative;
+    }
+    .cart a,
+    .left-icons a {
+        text-decoration: none;
+        font-size: 22px;
+        color: #000000;
+        transition: color 0.5s ease;
+    }
+    .cart a:hover,
+    .left-icons a:hover {
+        color: #21a654;
+    }
+    .cart span {
+        position: absolute;
+        font-family: vazir;
+        font-size: 10px;
+        left: -3px;
+        top: -3px;
+        padding-left: 2px;
+        padding-right: 2px;
+        border: 1px solid   #868686  ;
+        border-radius: 50%;
+    }
+    .cart .cart-list {
+        position: absolute;
+        z-index: 3;
+        right: -100%;
+        width: 320px;
+        height: 80px;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #060606;
+        display: none;
+        transition: all 0.5s ease;
+    }
+    .cart .cart-list.active {
+        display: block;
+    }
+    .cart-list .content {
+        border: 0.5px solid #e6e8e4;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .cart-list .content p {
+        font-family: vazir;
+        font-size: 15px;
+        color: #e6e8e4;
+    }
+    /* End of Header-left*/
+
+    /* A-3) navbar*/
+    .navbar {
+        position: relative;
+        background-color:  #010101  ;
+        height: 135px;
+    }
+    .navbar .user-account {
+        position: absolute;
+        top: 37.5%;
+        right: 5%;
+    }
+    .navbar .user-account a {
+        font-size: 25px;
+        color: #e6e8e4;
+        visibility: hidden;
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 5px;
+        right: 5%;
+    }
+    .logo img {
+        width: 125px;
+        height: 125px;
+    }
+    .navbar .quick-link {
+        position: absolute;
+        top: 37.5%;
+        left: 15%;
+    }
+    .quick-link a {
+        position: relative;
+        display: inline-block;
+        font-family: vazir;
+        color:#e6e8e4;
+        margin-right: 40px;
+        text-decoration: none;
+    }
+    .quick-link a::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #21a654;
+        transition: width 0.3s ease-in-out;
+    }
+    .quick-link a:hover::before {
+        width: 100%;
+    }
+    .navbar .list-categories {
+        position: absolute;
+        top: 80px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 65%;
+        right: 17.5%;
+        background-color: #060606;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 100;
+        display: none;
+    }
+    .navbar .list-categories.active {
+        display: block;
+    }
+    .list-categories .category {
+        display:inline-block;
+        width: 22.5%;
+    }
+    .category .image img {
+        width: 85%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .category .title {
+        margin-top: 5px;
+    }
+    .category .title a {
+        font-family: vazir;
+        font-weight: 800;
+        text-decoration: none;
+        color: #e6e8e4;
+    }
+    .navbar .search-box {
+        position: absolute;
+        top: 37.5%;
+        left: 5%;
+    }
+    .search-box a {
+        font-size: 25px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #21a654;
+    }
+    .navbar .mobile-menu {
+        position: absolute;
+        top: 37.5%;
+        left: 5%;
+    }
+    .mobile-menu a {
+        font-size: 25px;
+        text-decoration: none;
+        color: #e6e8e4;
+        visibility: hidden;
+    }
+    /* End of navbar*/
+/* End of HEADER */
+
+/* B) Menu Mobile*/
+    .menu-mobile {
+        position: absolute;
+        z-index: 2;
+        background-image: url(../pictures/menu-mobile.jpeg);
+        background-position: center;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 0 0 20px 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translateX(-335px);
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+    .menu-mobile.active {
+        transform: translateX(0);
+        visibility: visible;
+    }
+    .menu-mobile .menu-close {
+        position: absolute;
+        right: -40px;
+        color: #e6e8e4;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    .menu-mobile .menu-close:hover {
+        transform: rotate(360deg);
+        transition: 0.5s ease-in-out;
+    }
+    .menu-mobile ul {
+        list-style-type: none;
+    }
+    .menu-mobile ul li .title {
+        padding: 10px 20px 10px 20px;
+    }
+    .menu-mobile ul li .title:hover {
+        background-color: rgb(189, 166, 39);
+        transition: 0.5s ease;
+    }
+    .menu-mobile .add-content ul li {
+        padding: 10px 40px 10px 20px;
+    }
+    .menu-mobile ul li i {
+        font-size: 20px;
+        color: #e6e8e4;
+        cursor: pointer;
+    }
+    .menu-mobile ul li a {
+        font-family: shabnam;
+        text-decoration: none;
+        color: #e6e8e4;
+        cursor: pointer;
+    }
+    .menu-mobile ul .add-content {
+        position: relative;
+    }
+    .menu-mobile ul .add-content i {
+        position: absolute;
+        margin-left: 20px;
+        top: 12.5px;
+        left: 0;
+    }
+    .menu-mobile ul .add-content a {
+        margin-left: 120px;
+    }
+    .add-content .list-container {
+        font-family: vazir;
+        font-size: 12.5px;
+    }
+    .list-container {
+        display: none;
+    }
+    .list-container.active {
+        display: inline;
+        transition: 2s ease;
+    }
+    .list-container a:hover {
+        color: rgb(189, 166, 39);
+        transition: 0.5s ease;
+    }
+    .menu-mobile .menu-icon {
+        position: absolute;
+        bottom: 4%;
+        right: 17.5%;
+    }
+    .menu-icon a {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        color: #e6e8e4;
+    }
+    .menu-icon a:hover {
+        background-color: #e6e8e4;
+        color: rgb(189, 166, 39);
+        border-radius: 50%;
+        transition: 0.5s ease;
+    }
+    .menu-icon a i {
+        font-size: 20px;
+    }
+/* End of Menu Mobile */
+
+/* C) Slider */
+    .swiper {
+        width: 100%;
+        height: 100vh;
+    }
+    #slider-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url(../pictures/Slider-1.jpg);
+        background-size: cover;
+    }
+    #slider-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url(../pictures/Slider-2.jpg);
+        background-size: cover;
+    }
+    .swiper .content {
+        background-color: rgba(208, 208, 208, 0.3);
+        backdrop-filter: opacity(10px);
+        border-radius: 35px;
+        padding: 25px;
+    }
+    .swiper .content h2 {
+        font-family: shabnam;
+        font-size: 15px;
+        margin: 10px;
+    }
+    .swiper .content .title {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border-left: 3px solid #000000;
+        border-right: 3px solid #000000;
+    }
+    .swiper .content h1 {
+        font-family: vazir;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    .swiper .content a {
+        display: inline-block;
+        font-family: shabnam;
+        font-size: 17.5px;
+        text-decoration: none;
+        color: #e6e8e4;
+        background-color: #21a654;
+        padding: 15px 45px 15px 45px;
+        border-radius: 15px;
+        transition: all 2s ease;
+    }
+    .swiper .content a:hover {
+        background-color: #e6e8e4;
+        color: #000000;
+        border-radius: 0;
+    }
+    .swiper .swiper-button-next,
+    .swiper .swiper-button-prev {
+        background-color: rgba(208, 208, 208, 0.3);
+        color: #000000;
+    }
+/* End of Slider */
+
+/* D) Gallery */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 25px;
+        max-width: 1250px;
+        padding: 5% 0 80px 0;
+        margin: auto;
+    }
+    .gallery-item {
+        text-align: center;
+        overflow: hidden; 
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .gallery-item.large { 
+        grid-row: span 2; 
+        grid-column: span 2;
+    }
+    .gallery-item .detail {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 103%;
+        bottom: 103%;
+        background-image: linear-gradient(to bottom, rgba(109, 109, 109, 0), rgba(2, 2, 2, 0.6));
+        transform: translateY(130px);
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    .gallery-item .detail.active {
+        transform: translateY(0);
+        visibility: visible;
+    }
+    .gallery-item .detail .content {
+        position: absolute;
+    }
+    .gallery-item .detail .content h1 {
+        font-family: vazir;
+        font-size: 20px;
+        color: #e6e8e4;
+        margin-bottom: 10px;
+    }
+    .gallery-item .detail .content h4 {
+        font-family: vazir;
+        font-size: 12.5px;
+        max-width: 100%;
+        color: #e6e8e4;
+    }
+    .gallery-item .detail .content h4 span {
+        text-decoration: line-through;
+    }
+    .gallery-item .detail .content button,
+    .campaign .detail button,
+    .group-item .detail button {
+        background-color: #21a654;
+        border: none;
+        border-radius: 7.5px;
+        padding: 10px;
+        margin: 10px 0 20px 0;
+        cursor: pointer;
+    }
+    .gallery-item .detail .content button:hover,
+    .campaign .detail button:hover,
+    .group-item .detail button:hover {
+        background-color:  #9a34b4;
+    }
+    .gallery-item .detail .content button a,
+    .campaign .detail button a,
+    .group-item .detail button a {
+        font-family: vazir;
+        text-decoration: none;
+        color: #e6e8e4;
+    }
+    .gallery div:nth-child(2) {
+        --animate-duration: 1.2s;
+    }
+    .gallery div:nth-child(3) {
+        --animate-duration: 1.4s;
+    }
+    .gallery div:nth-child(4) {
+        --animate-duration: 2s;
+    }
+    .gallery div:nth-child(5) {
+        --animate-duration: 1.8s;
+    }
+    .gallery div:nth-child(6) {
+        --animate-duration: 1.6s;
+    }
+/* End of Gallery */
+
+/* E) Campaign */
+    .campaign {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 500px;
+        grid-auto-rows: minmax(100px, auto);
+        max-width: 1250px;
+        margin: 0 auto 50px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .campaign .image {
+        text-align: center;
+        position: relative;
+        top: 5%;
+    }
+    .campaign .image img {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    .campaign .detail {
+        text-align: center;
+        position: relative;
+        top: 17.5%;
+    }
+    .campaign .detail h3 {
+        font-family: vazir;
+        font-size: 30px;
+        color: #21a654;
+        margin-bottom: 30px;
+    }
+    .campaign .detail h4 {
+        font-family: vazir;
+        font-size: 22.5px;
+        margin-bottom: 45px;
+    }
+    .campaign .detail p {
+        font-family: shabnam;
+        color:  #be3333 ;
+        text-decoration: line-through;
+        margin-bottom: 40px;
+    }
+    .campaign .detail button a {
+        font-size: 17.5px;
+    }
+/* End of Campaign */
+
+/* F) Category */
+    .group-title {
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-family: vazir;
+        font-size: 40px;
+        color: #e6e8e4;
+        text-align: center;
+    }
+    .group {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 25px;
+        max-width: 1250px;
+        padding: 0 0 80px 0;
+        margin: auto;
+    }
+    .group-item {
+        max-width: 300px;
+        max-height: 300px;
+        overflow: hidden;
+    }
+    .group-item img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+    }
+    .group-item .detail {
+        position: relative;
+        bottom: 100%;
+        width: 100%;
+        height: 99%;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom, rgba(180, 180, 180, 0), rgba(22, 146, 28, 0.5));
+        cursor: pointer;
+    }
+    .group-item .detail.active {
+        background-image: linear-gradient(to bottom, rgba(180, 180, 180, 0), rgba(75, 9, 105, 0.5));
+    }
+    .group-item .detail .content {
+        position: absolute;
+        padding-right: 20px;
+        bottom: -60px;
+        transition: all 0.5s ease-in-out;
+    }
+    .group-item .detail .content button {
+        visibility: hidden;
+    }
+    .group-item .detail .content.active {
+        bottom: 0;
+    }
+    .group-item .detail .content.active button {
+        visibility: visible;
+    }
+    .group-item .detail .content h1 {
+        font-family: vazir;
+        color: #e6e8e4;
+        margin-bottom: 10px;
+    }
+/* End of Group */
+
+/* G) Banner */
+    .banner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #e6e8e4;
+        height: 400px;
+        margin-bottom: 100px;
+    }
+    .banner img:nth-child(2) {
+        position: absolute;
+        right: 0;
+        max-height: 100%;
+    }
+    .banner img:nth-child(3) {
+        position: absolute;
+        left: 0;
+        max-height: 100%;
+        transform: scaleX(-1) scaleY(-1);
+    }
+    .banner .container {
+        z-index: 15;
+    }
+    .banner .container h4 {
+        font-family: vazir;
+        font-size: 25px;
+        color: #21a654;
+        margin-bottom: 35px;
+    }
+    .banner .container p {
+        font-family: shabnam;
+        font-size: 40px;
+        color: #9a34b4;
+    }
+
+
+
+
+@media (max-width: 1350px) {
+    .gallery,
+    .campaign,
+    .group {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .group-item .detail .content h1 {
+        font-size: 25px;
+    }
+
+    .banner .container h4,
+    .banner .container p {
+        text-shadow: 2px 2px #000000;
+    }
+}
+
+@media (min-width: 1300px) {
+    .swiper .content h2 {
+        font-size: 17.5px;
+    }
+    .swiper .content h1 {
+        font-size: 50px;
+    }
+    .swiper .content a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px)  {
+    .header,
+    .quick-link,
+    .search-box {
+        display: none;
+    }
+    .navbar {
+        height: 100px;
+    }
+    .navbar .logo {
+        right: 40%;
+    }
+    .logo img {
+        width: 90px;
+        height: 90px;
+    }
+    .navbar .user-account a,
+    .navbar .mobile-menu a {
+        visibility: visible;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        visibility: hidden;
+    }
+
+    .navbar .menu-mobile {
+        visibility: hidden;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-item.large {
+        grid-row: span 1; 
+        grid-column: span 1;
+    }
+    .gallery-item .detail .content h1 {
+        font-size: 15px;
+    }
+    .gallery-item .detail .content button a {
+        font-size: 10px;
+    }
+
+    .campaign {
+        grid-template-columns: repeat(1, 1fr);
+        height: 850px;
+    }
+
+    .group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
